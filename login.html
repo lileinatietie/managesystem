@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link rel="stylesheet" href="/boot/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <script src="/boot/bootstrap-4.4.1-dist/jquery-3.0.0.min.js"></script>
+    <script src="/boot/bootstrap-4.4.1-dist/popper.min.js"></script>
+    <script src="/boot/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+
+    <!-- Bootstrap core CSS -->
+<link href="/boot/bootstrap-4.4.1-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="/boot/bootstrap-4.4.1-dist/signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center" style="background: url(photo/bg2.jpg)">
+    <form class="form-signin" method="get" action="LoginAction">
+  <img class="mb-4" src="/photo/denglu.jpg" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">请登录使用</h1>
+
+	<div class="form-group row">
+  <label for="inputPassword3" class="col-sm-3 col-form-label sr-only">身份</label>
+								<div class="col-sm-6">
+									<select class="form-control" name="userid">
+										<option value="manager">管理员</option>
+										<option value="student">学生</option>
+										
+									</select>
+								</div>					
+						</div>		
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input type="text" id="inputEmail3" class="form-control" placeholder="用户名"  name="username" required>
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword3" class="form-control" placeholder="密码" required name="password">
+  <!-- <input type="submit" name="submit1" value="denglu"> -->
+  <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">登录</button>
+ 
+    <p class="mt-5 mb-3 text-muted">&copy; lyh</p>
+</form>
+
+<form class="form-signin" method="get" action="ReginAction">
+  <img class="mb-4" src="photo/denglu.jpg"  alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">新用户清注册(学生)</h1>
+
+	<div class="form-group row">
+  <label for="inputPassword3" class="col-sm-3 col-form-label sr-only">身份</label>
+								<div class="col-sm-6">
+									<select class="form-control" name="userid">
+										<!-- <option value="manager">管理员</option> -->
+										<option value="student">学生</option>
+										
+									</select>
+								</div>					
+						</div>		
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input type="text" id="inputEmail3" class="form-control" placeholder="用户名"  name="username" required>
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword3" class="form-control" placeholder="密码" required name="password">
+  <!-- <input type="submit" name="submit1" value="denglu"> -->
+  <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit1">注册</button>
+ 
+    <p class="mt-5 mb-3 text-muted">&copy; lyh</p>
+</form>
+
+</body>
+</html>

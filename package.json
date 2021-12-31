@@ -14,5 +14,8 @@
   ],
   "author": "lyh",
   "license": "GNU",
-  "git repository":"https://github.com/lileinatietie/managesystem"
+  "git repository": "https://github.com/lileinatietie/managesystem",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
