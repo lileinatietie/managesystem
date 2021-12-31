@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/boot/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <script src="/boot/bootstrap-4.4.1-dist/jquery-3.0.0.min.js"></script>
+    <script src="/boot/bootstrap-4.4.1-dist/popper.min.js"></script>
+    <script src="/boot/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+</head>
+<body style="background: url(photo/bg1.jpg)">
+
+	<div class="container">
+		<!-- 导航条 -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand">鲁毅辉</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+	
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active"><a class="nav-link" href="#">190110910119
+							<span class="sr-only">(current)</span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">19计算机1班</a></li>
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+						role="button" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false"> 已登录 </a>
+						
+						<c:if test="${username!=null }">
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							 
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="login.html">注销</a>
+						</div>
+						</c:if>
+						</li>
+					<li class="nav-item"><a class="nav-link " href="#">Hello</a>
+					</li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0" >
+					<input class="form-control mr-sm-2" type="search" name="search"
+						placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Search</button>
+				</form>
+			</div>
+		</nav>
+		<div class="row" style="margin-top: 10px">
+			<div class="col-lg-3">
+
+
+				<div class="list-group">
+					<a href="index_s.html" class="list-group-item list-group-item-action active">首页</a>
+					<a href="repair.html" class="list-group-item list-group-item-action">寝室保修登记</a>
+					
+					<a href="login.html" class="list-group-item list-group-item-action ">登出</a>
+				</div>
+
+
+			</div>
+
+
+			<div class="col-lg-6">
+
+
+				<div class="card">
+					<div class="card-header">寝室报修登记(确定后不可更改)</div>
+					<div class="card-body">
+
+					
+
+						<form method="get" action="AddRepair">
+
+							<div class="form-group row">
+								<label for="inputEmail3" class="col-sm-3 col-form-label">姓名</label>
+								<div class="col-sm-6">
+									<input type="text" name="username" class="form-control"
+										id="inputEmail3" placeholder="姓名" required>
+								</div>
+							</div>
+
+
+							<div class="form-group row">
+								<label for="inputEmail3" class="col-sm-3 col-form-label">学号</label>
+								<div class="col-sm-9">
+									<input type="text" name="password" class="form-control"
+										id="inputEmail3" placeholder="学号" required>
+								</div>
+							</div>
+
+
+
+
+
+
+
+							<div class="form-group row">
+								<label for="inputEmail3" class="col-sm-3 col-form-label">寝室号</label>
+								<div class="col-sm-9">
+									<input type="text" name="dornum" class="form-control"
+										id="inputEmail3" placeholder="寝室号" required>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="inputPassword3" class="col-sm-3 col-form-label">报修日期</label>
+								<div class="col-sm-6">
+									<input type="date" name="regdate" class="form-control"
+										id="inputPassword3" placeholder="报修日期" value="1980-01-01">
+								</div>
+							</div>
+							<div class="form-group row ">
+								<label for="inputEmail3" class="col-sm-3 col-form-label">报修备注：</label>
+								<div class="col-sm-9">
+									<textarea class="form-control" rows=3 name="comment" required></textarea>
+								</div>
+							</div>
+
+
+							<div class="form-group row">
+								<div class="col-sm-10">
+									<button type="submit" class="btn btn-primary">确定</button>
+								</div>
+							</div>
+						</form>
+
+
+
+					</div>
+				</div>
+
+
+			</div>
+
+			<div class="col-lg-3">
+				<div class="card">
+
+					<div class="card-body">
+						<h5 class="card-title">报修登记</h5>
+						<p class="card-text"></p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+</body>
+</html>

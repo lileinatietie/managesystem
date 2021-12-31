@@ -141,22 +141,37 @@ app.get('/LoginAction', function (req, res, next) {
          
         }
 
-    
-        
-    // next()
   })
 
   app.get("/ReginAction", (req, res)=>{
-    // res.send(req.query)
-    // console.log(req.query)
     const stuRg = new mydata({ uname: req.query.username, upwd: req.query.password});
     stuRg.save()
 
-    // ejs.renderFile(filename, data, options, function(err, str){
-    //     //str => 输出渲染的HTML字符串
-    // })   {result:cal.add_ab(dataA,dataB)}
     
     ejs.renderFile("login.html", { }, function(err,str){
+        res.send(str)
+    });
+})
+
+app.get("/AddGrade", (req, res)=>{
+  
+    const kitty = new stugrade({ sname: req.query.username, sno: req.query.password, 
+                                sdor: req.query.dornum, date: req.query.regdate, grade: req.query.grade,});
+    kitty.save()
+
+    
+    ejs.renderFile("./public/grade.html", {}, function(err,str){
+        res.send(str)
+    });
+})
+
+app.get("/AddRepair", (req, res)=>{
+    const sturepair1 = new sturepair({ sname: req.query.username, sno: req.query.password, 
+                                sdor: req.query.dornum, rdate: req.query.regdate, rps: req.query.comment,});
+    sturepair1.save()
+
+    
+    ejs.renderFile("./public/repair.html", {returnVal: "success"}, function(err,str){
         res.send(str)
     });
 })
