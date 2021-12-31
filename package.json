@@ -16,6 +16,7 @@
   "license": "GNU",
   "git repository": "https://github.com/lileinatietie/managesystem",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.2",
     "mongoose": "^6.1.4"
   }

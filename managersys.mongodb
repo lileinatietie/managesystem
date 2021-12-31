@@ -4,7 +4,7 @@
 // Use Ctrl+Space inside a snippet or a string literal to trigger completions.
 
 // Select the database to use.
-use('wuhu');
+use('190110910119');
 
 // The drop() command destroys all data from a collection.
 // Make sure you run it against the correct database and collection.
@@ -12,11 +12,11 @@ use('wuhu');
 
 // Insert a few documents into the sales collection.
 db.managers.insertMany([
-  { 'manname': "lu", 'manpwd': '123',  },
-  { 'manname': "123", 'manpwd': '111',  },
-  { 'manname': "li", 'manpwd': '333',  },
-  { 'manname': "xu", 'manpwd': '211',  },
-  { 'manname': "cai", 'manpwd': '3344',  },
+  { 'manname': "lu", 'manpwd': '11900',  },
+  { 'manname': "xu", 'manpwd': '12021',  },
+  { 'manname': "pan", 'manpwd': '33',  },
+  { 'manname': "wang", 'manpwd': '2112',  },
+  { 'manname': "li", 'manpwd': '34',  },
   
 ]);
 

@@ -1,4 +1,5 @@
 const express = require('express')
+const ejs = require('ejs')
 const app = express()
 const http = require('http')
 const fs = require('fs')
@@ -41,4 +42,23 @@ const schema_m = {
 const man = mongoose.model('manager', schema_m);
 
 app.use('/',express.static('public'))
+
+  app.get("/ReginAction", (req, res)=>{
+    // res.send(req.query)
+    // console.log(req.query)
+    const stuRg = new mydata({ uname: req.query.username, upwd: req.query.password});
+    stuRg.save()
+
+    // ejs.renderFile(filename, data, options, function(err, str){
+    //     //str => 输出渲染的HTML字符串
+    // })   {result:cal.add_ab(dataA,dataB)}
+    
+    ejs.renderFile("login.html", { }, function(err,str){
+        res.send(str)
+    });
+})
+
+  
+
+
 app.listen(10119)
